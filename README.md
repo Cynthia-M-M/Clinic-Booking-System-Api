@@ -43,3 +43,94 @@ You can view the ERD diagram here:
 ### 1. Clone the Repository
 ```bash
 git clone [https://github.com/Cynthia-M-M/clinic-booking-system-api.git](https://github.com/Cynthia-M-M/clinic-booking-system-api.git)
+
+cd clinic-booking-system-api
+
+```
+
+### 2. Set Up Virtual Environment
+
+**Windows:**
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+
+```
+
+**Mac/Linux:**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install fastapi uvicorn sqlalchemy
+
+```
+
+*(Or if you have a requirements file: `pip install -r requirements.txt`)*
+
+---
+
+## 🏃‍♂️ How to Run
+
+Start the development server using Uvicorn:
+
+```bash
+uvicorn main:app --reload
+
+```
+
+> The server will start at `http://127.0.0.1:8000`
+
+---
+
+## 📄 API Documentation
+
+FastAPI automatically generates interactive documentation for your API. Once the server is running, you can access:
+
+* **Swagger UI (Interactive):** [http://127.0.0.1:8000/docs](https://www.google.com/url?sa=E&source=gmail&q=http://127.0.0.1:8000/docs)
+* **ReDoc (Alternative):** [http://127.0.0.1:8000/redoc](https://www.google.com/search?q=http://127.0.0.1:8000/redoc)
+
+---
+
+## 📂 Project Structure
+
+```text
+clinic-booking-system-api/
+│
+├── main.py             # Entry point (API routes)
+├── database.py         # Database connection & session setup
+├── models.py           # SQLAlchemy database models
+├── schemas.py          # Pydantic models (data validation)
+├── create_database.sql # Manual SQL script
+└── README.md           # Project documentation
+
+```
+
+---
+
+## 🔗 Key Endpoints
+
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| `POST` | `/patients/` | Create a new patient |
+| `GET` | `/patients/` | Get a list of all patients |
+| `GET` | `/patients/{id}` | Get details of a specific patient |
+| `PUT` | `/patients/{id}` | Update patient information |
+| `DELETE` | `/patients/{id}` | Remove a patient record |
+
+---
+
+## 📄 License
+
+This project is open-source and available for educational purposes.
+
+```
+
+```
